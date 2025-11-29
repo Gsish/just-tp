@@ -1,0 +1,218 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  padding: 16px 24px;
+  border-bottom: 1px solid #1f2937;
+  background: radial-gradient(circle at top left, #1d4ed8, #020617);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.app-header p {
+  margin: 4px 0 0;
+  color: #9ca3af;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 16px;
+  padding: 16px;
+  height: calc(100vh - 70px);
+  box-sizing: border-box;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  background: #020617;
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid #111827;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card h2 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.field label {
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  color: #9ca3af;
+}
+
+input,
+select {
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid #1f2937;
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+input:focus,
+select:focus {
+  outline: 1px solid #3b82f6;
+}
+
+.sort-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.sort-buttons button {
+  flex: 1;
+  padding: 6px 8px;
+  border-radius: 999px;
+  border: 1px solid #1f2937;
+  background: #020617;
+  color: #9ca3af;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.sort-buttons button.active {
+  background: #1d4ed8;
+  color: white;
+  border-color: transparent;
+}
+
+.list-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.pdf-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  max-height: calc(100vh - 260px);
+}
+
+.pdf-item {
+  padding: 8px 10px;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.05s ease;
+}
+
+.pdf-item:hover {
+  background: #020617;
+  transform: translateY(-1px);
+}
+
+.pdf-item.active {
+  background: #1d4ed8;
+}
+
+.pdf-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.pdf-name {
+  font-weight: 500;
+  word-break: break-all;
+}
+
+.pdf-size {
+  font-size: 0.78rem;
+  color: #9ca3af;
+}
+
+.pdf-sub {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.viewer {
+  min-width: 0;
+}
+
+.viewer-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.viewer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+}
+
+.viewer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.download-link {
+  font-size: 0.85rem;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #1d4ed8;
+  color: #bfdbfe;
+}
+
+.download-link:hover {
+  background: #1d4ed8;
+  color: #fff;
+}
+
+.pdf-frame {
+  flex: 1;
+  border-radius: 12px;
+  border: 1px solid #111827;
+  width: 100%;
+}
+
+.info {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.error {
+  font-size: 0.85rem;
+  color: #fca5a5;
+}
